@@ -1,0 +1,12 @@
+name: "react-showcase"
+services:
+  app:
+    # restart: always
+    build: ./app
+    ports:
+      - "127.0.0.1:80:80"
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./app
+          target: /app
